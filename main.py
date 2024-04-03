@@ -11,7 +11,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SH_TOKEN = os.environ.get("SHEETY_TOKEN")
+TW_SID = os.environ.get("TWILIO_ACC_SID")
+TW_TOKEN = os.environ.get("TWILIO_TOKEN")
+TW_NUMBER = os.environ.get("TWILIO_PHONE_NUMBER")
+TEQUILA_TOKEN = os.environ.get("TEQUILA_KEY")
+
+headers = {
+    'X-USER-TOKEN': SH_TOKEN
+}
 
 
-
-print(SH_TOKEN)
