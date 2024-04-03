@@ -8,4 +8,10 @@ import os
 import datetime
 from dotenv import load_dotenv
 
+load_dotenv()
 
+SH_TOKEN = os.environ.get("SHEETY_TOKEN")
+
+
+
+print(SH_TOKEN)
