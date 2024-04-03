@@ -15,9 +15,19 @@ TW_SID = os.environ.get("TWILIO_ACC_SID")
 TW_TOKEN = os.environ.get("TWILIO_TOKEN")
 TW_NUMBER = os.environ.get("TWILIO_PHONE_NUMBER")
 TEQUILA_TOKEN = os.environ.get("TEQUILA_KEY")
+TEQUILA_SEARCH_ENDPOINT = "https://api.tequila.kiwi/v2/locations/query"
+SHEETY_URL = "https://api.sheety.co/83f756b5b637bb7aaefd61fc0a250dde/personalFlightDeals2024/prices"
 
-headers = {
-    'X-USER-TOKEN': SH_TOKEN
+# flight_params = {
+#     "term": "MAN",
+
+# }
+
+
+sheety_headers = {
+    'Authorization': 'Bearer '+ SH_TOKEN,
 }
 
 
+response_from_sheety = requests.get(url=SHEETY_URL, headers=sheety_headers)
+print(response_from_sheety.json())
