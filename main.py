@@ -6,6 +6,6 @@ from notification_manager import NotificationManager
 import requests
 import os
 import datetime
-import python_dotenv
+from dotenv import load_dotenv
 
 
